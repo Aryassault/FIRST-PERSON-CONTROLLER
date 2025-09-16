@@ -30,9 +30,10 @@ public class PlayerMove : MonoBehaviour
         transform.Translate(Movement * speed * Time.deltaTime);
     }
 
+        // to check if player is touching the ground or not
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.tag == "Ground")
+            if (collision.gameObject.tag == "Ground") // if player is grounded then jump.
             {
                 isGrounded = true;
             }
@@ -40,7 +41,7 @@ public class PlayerMove : MonoBehaviour
 
         private void OnCollisionExit(Collision collision)
         {
-            if (collision.gameObject.tag == "Ground")
+            if (collision.gameObject.tag == "Ground") // if player is not grounded then dont jump.
             {
                 isGrounded = false;
             }
@@ -49,7 +50,7 @@ public class PlayerMove : MonoBehaviour
     void PlayerJump()
     {
         Debug.Log("hey, you jumping ? ");
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded) // checking if space button is down and isgrounded is true.
         {
             rb.AddForce(Vector3.up * jumpforce);
         }
