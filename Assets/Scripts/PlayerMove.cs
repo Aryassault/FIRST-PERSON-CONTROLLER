@@ -49,7 +49,6 @@ public class PlayerMove : MonoBehaviour
 
     void PlayerJump()
     {
-        Debug.Log("hey, you jumping ? ");
         if (Input.GetButtonDown("Jump") && isGrounded) // checking if space button is down and isgrounded is true.
         {
             rb.AddForce(Vector3.up * jumpforce);
