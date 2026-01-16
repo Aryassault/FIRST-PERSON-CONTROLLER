@@ -43,7 +43,7 @@ public class PlayerLook : MonoBehaviour
         {
             Physics.Raycast(transform.position, transform.forward, out hit, 10f);
             Debug.DrawRay(transform.position, transform.forward, color: Color.red);
-            Debug.Log($"you collided with {hit.collider.gameObject.name}");
+            //Debug.Log($"you collided with {hit.collider.gameObject.name}");
         }
     }
 }
