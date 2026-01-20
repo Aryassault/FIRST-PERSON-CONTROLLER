@@ -180,10 +180,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6907772745028232487}
-  serializedVersion: 5
+  serializedVersion: 4
   m_Mass: 0.01
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -214,6 +214,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpforce: 2
+  crouchScaleFactor: 0.5
+  crouchLerpSpeed: 8
+  sprintMultiplier: 1.8
+  speedLerpSpeed: 10
+  maxStamina: 5
+  staminaDrainRate: 1
+  staminaRegenRate: 0.8
+  staminaRegenDelay: 1
+  minStaminaToStartSprint: 0.5
+  staminaBar: {fileID: 0}
 --- !u!114 &6965231393016261319
 MonoBehaviour:
   m_ObjectHideFlags: 0
